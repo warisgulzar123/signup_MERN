@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
 dotenv.config();
-const mongoURI = process.env.MONGO_URI || '3000';
+const mongoURI = process.env.MONGO_URI ;
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,

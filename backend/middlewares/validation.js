@@ -7,9 +7,9 @@ const signupvalidation = (req, res, next) => {
         password: Joi.string().min(6).required(),
     });
 
-    const{error} = schema.validate(req.body);
+    const { error } = schema.validate(req.body);
     if (error) {
-        return res.status(400).json({message:'Validation error', error: error.details[0].message });
+        return res.status(400).json({ message: 'Validation error', error: error.details[0].message });
     }
     next();
 }
@@ -20,9 +20,9 @@ const loginvalidation = (req, res, next) => {
         password: Joi.string().min(6).required(),
     });
 
-    const{error} = schema.validate(req.body);
+    const { error } = schema.validate(req.body);
     if (error) {
-        return res.status(400).json({message:'Validation error', error: error.details[0].message });
+        return res.status(400).json({ message: 'Validation error', error: error.details[0].message });
     }
     next();
 }
