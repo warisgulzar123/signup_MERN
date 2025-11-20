@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors({
   origin: [
     'http://localhost:5173', // Development
-    'https://signup_MERN.vercel.app' // Production
+    'https://signupmern-git-main-waris-alis-projects-2c1a53d2.vercel.app/' // Production
   ],
   credentials: true
 }));
