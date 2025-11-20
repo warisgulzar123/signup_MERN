@@ -17,7 +17,14 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173', // Development
+    'https://signup_MERN.vercel.app' // Production
+  ],
+  credentials: true
+}));
+
 app.use('/api', userRouter);
 app.use('/auth', authrouter);
 app.use('/products', productsRouter);

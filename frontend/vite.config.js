@@ -9,3 +9,12 @@ export default defineConfig({
     tailwindcss()],
   
 })
+
+// src/config/api.js
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+
+export const API_ENDPOINTS = {
+  SIGNUP: `${API_BASE_URL}/auth/signup`,
+  LOGIN: `${API_BASE_URL}/auth/login`,
+  USERS: `${API_BASE_URL}/api/users`
+};
