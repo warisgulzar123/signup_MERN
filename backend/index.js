@@ -22,6 +22,7 @@ app.use(cors({
     'http://localhost:5173', // Development
     'https://signupmern-git-main-waris-alis-projects-2c1a53d2.vercel.app/',
     'https://signupmern.vercel.app/',
+    'signupmern.vercel.app/',
     // Production
   ],
   credentials: true
