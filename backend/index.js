@@ -17,16 +17,7 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-  origin: [
-    'http://localhost:5173', // Development
-    'https://signupmern-git-main-waris-alis-projects-2c1a53d2.vercel.app/',
-    'https://signupmern.vercel.app/',
-    'signupmern.vercel.app/',
-    // Production
-  ],
-  credentials: true
-}));
+app.use(cors());
 
 app.use('/api', userRouter);
 app.use('/auth', authrouter);
