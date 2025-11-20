@@ -6,6 +6,13 @@ export const signup = async (req, res) => {
   try {
     const { username, email, password } = req.body;
 
+    console.log('SIGNUP STARTED ==========');
+    console.log('Username:', username);
+    console.log('Email:', email);
+    console.log('Password:', password);
+    console.log('==============================');
+
+
     // Check if user already exists
     const existingUser = await Usermodel.findOne({ email });
     if (existingUser) {
