@@ -21,6 +21,8 @@ export const signup = async (req, res) => {
 
     // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
+    console.log(hashedPassword);
+    
 
     // Create new user instance
     const newUser = new Usermodel({
@@ -56,7 +58,7 @@ export const login = async (req, res) => {
    }
    const token = jwt.sign({ email: existingUser.email, id: existingUser._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-    res.status(200).json({ message: 'User logged in successfully', 
+    res.status(200).json({ message: 'User logged in successfully',
       token,
       user: {
         id: existingUser._id,

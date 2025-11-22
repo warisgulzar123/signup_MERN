@@ -51,9 +51,13 @@ function Login() {
       });
 
       const data = await response.json();
+              console.log(data);
+
 
       if (response.ok) {
         // Save token to localStorage
+        console.log(data);
+        
         if (data.token) {
           localStorage.setItem('token', data.token);
         }
@@ -63,6 +67,7 @@ function Login() {
             state: { 
               message: 'Login successful!',
               user: data.user 
+              
             }
           });
         }, 1000);
@@ -77,6 +82,7 @@ function Login() {
   };
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       {/* Medium Size Card */}
       <div className="w-full max-w-md"> {/* Increased to max-w-md */}

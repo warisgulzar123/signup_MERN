@@ -193,7 +193,7 @@ function Signup() {
                   I agree to <span className="text-purple-300 underline">Terms</span>
                 </label>
               </div>
-
+              
               {/* Submit Button */}
               <button
                 type="submit"
